@@ -11,7 +11,7 @@ if not os.path.exists(LISTS_DIR):
 # Create an instance of the Tk class
 root = tk.Tk()
 root.title("German Vocabulary Learning")
-root.state("zoomed")
+root.wm_attributes('-zoomed', True)  # Maximize the window (works on most platforms)
 root.configure(bg='#121212')
 
 # Colors and Fonts
@@ -335,3 +335,4 @@ tk.Radiobutton(view_mode_frame, text="Both", command=show_translations, variable
 
 # Start the main event loop
 root.mainloop()
+    
